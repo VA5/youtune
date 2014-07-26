@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>YouTune</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	 	$("#motto").hide();	
+	  	$("#youtune").click(function(){
+	    	$("#motto").toggle();
+  		});
+	});
+	</script>
+
+	<script>
+
+		function betaSignup(){
+			email = $('email').val();
+			$('email').val("adding you...")
+
+			$.ajax({
+			url:"/cloud/api/beta?email="+email+"&action=signup",
+			data:{
+			"email":email
+			},
+
+			complete:function(transport){
+			$('email').val("added!")
+			}
+		})
+	}
+
+	</script>
+
+</head>
+<body>
+
+<div id="youtune">
+	YouTune
+</div>
+
+<div id="motto">
+	Listen to YouTube
+</div>
+
+<form action="javascript:betaSignup()">
+	<p><input type="text" id="email" name="email" placeholder="E-mail"/></P>
+	<p><input type="password" id="password" name="password" placeholder="Password"/></p>
+	<p><input type="submit" value="Sign Up" id="sisubmit"/></p>
+</form>
+
+</body>
+</html>

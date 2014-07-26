@@ -1,0 +1,39 @@
+body {
+	background-color: rgb(91,131,176);
+	font-family: "lucida sans", calibri;
+	color: white;
+	background-image: url(./img/burgundybkgd.jpg);
+	text-align: center;
+	margin-top: 80px;
+}
+
+form {
+	margin-top: 70px;
+}
+
+#youtune {
+	font-size: 150px;
+}
+
+#youtune:hover {
+	color: rgb(20,20,20);
+}
+
+#motto {
+	font-size: 72px;
+}
+
+input {
+	width: 250px;
+	height: 30px;
+	text-indent: 10px;
+	font-size: 15px;
+
+}
+
+#sisubmit {
+	color: white;
+	background-color: rgb(20,20,20);
+	border: black;
+}
+
