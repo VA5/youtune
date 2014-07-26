@@ -16,8 +16,8 @@
 	<script>
 
 		function betaSignup(){
-			email = $('email').val();
-			$('email').val("adding you...")
+			email = $('#email').val();
+			$('#email').val("adding you...")
 
 			$.ajax({
 			url:"/cloud/api/beta?email="+email+"&action=signup",
@@ -26,7 +26,7 @@
 			},
 
 			complete:function(transport){
-			$('email').val("added!")
+			$('#email').val("added!")
 			}
 		})
 	}
